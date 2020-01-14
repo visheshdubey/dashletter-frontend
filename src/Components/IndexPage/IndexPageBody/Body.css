@@ -1,0 +1,12 @@
+.block {
+    padding: 80px;
+}
+.largerBlock
+{
+    padding: 40px;
+    padding-bottom: 45px;
+}
+.contentBlock {
+    align-self: center;
+    background-color: inherit;
+}
