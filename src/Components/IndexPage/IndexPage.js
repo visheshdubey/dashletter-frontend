@@ -2,8 +2,7 @@ import React from 'react';
 import Modal from '../../UI/Modal/Modal';
 import Toolbar from './IndexPageToolbar/Toolbar';
 import Body from './IndexPageBody/Body';
-import SignUpForm from '../SignUpForm/SignUpForm';
-
+import Popup from './IndexPagePopup/Popup';
 class IndexPage extends React.Component {
     state = {
         showModal : false
@@ -17,14 +16,15 @@ class IndexPage extends React.Component {
     render() {
         return(
             <React.Fragment>
+                <Modal show={this.state.showModal} modalClosed={this.cancelModal}>
+                    <Popup />               
+                </Modal> 
                 <Toolbar 
                     brand = 'Dashletter'
                     text = 'SignUp'
                     clicked = {this.onClickHandler}/>
                 <Body className="mt-5"/>
-                <Modal show={this.state.showModal} modalClosed={this.cancelModal}>
-                    <SignUpForm />               
-                </Modal> 
+                
             </React.Fragment>
         );
     }
