@@ -24,16 +24,18 @@ const SignUp = () => (
             <Form.Group controlId="formBasicCheckbox" className="formend">
                 <Form.Check type="checkbox" size="sm" label="Agree to the terms and conditions" />
             </Form.Group>
-            <Button variant="danger" size="sm" type="submit" block>
+            <Button variant="danger" type="submit" block>
                 Submit
             </Button>
         </Form>    
-        <hr/>     
+        <hr/>    
+        <div className="d-flex flex-column">
         <ButtonGroup>
-            <Button variant="danger" className="ml-5 mr-3 px-2 py-2 googlelogo">Login with Google+</Button>
-            <Button className="mr-4 mr-5 px-2 py-2 fblogo" >Login with Facebook</Button>
+            <Button variant="danger" className="googlelogo">Login with Google+</Button>
+            <Button className="fblogo">Login with Facebook</Button>
         </ButtonGroup>
-    </Container>      
+        </div> 
+    </Container>    
 </React.Fragment>
         
 )
