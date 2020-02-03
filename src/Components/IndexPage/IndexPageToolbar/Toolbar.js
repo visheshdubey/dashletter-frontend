@@ -1,11 +1,12 @@
 import React from 'react';
 // import {Link} from 'react-router-dom';
 import {Navbar, Nav, InputGroup, FormControl, Button} from 'react-bootstrap';
+import '../../UserPage/Toolbar/Toolbar.css';
 
 class Toolbar extends React.Component {
     render() {
         return(
-            <Navbar sticky="top" expand="lg" style={{backgroundColor: 'rgba(255,255,255,1)'}}>
+            <Navbar sticky="top" expand="lg" className="bar">
                 <Navbar.Brand href="#home" className="ml-4 mr-5 my-auto" as="h1">Dashletter</Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
