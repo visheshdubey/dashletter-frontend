@@ -7,7 +7,7 @@
     display: flex;
     align-items: center;
     overflow: hidden;
-    background-color: rgba(0, 0, 0, 0.103);
+    background-color: rgba(247, 242, 242, 0.197);
     padding: 4px;
 }
 .slide{
@@ -33,11 +33,11 @@
     transition: 0.5s;
     cursor: pointer;
     &:hover{
-        background: rgba(0, 0, 0, 0.356);
+        background: rgba(0, 0, 0, 0.396);
     }
     i{
         font-size: 2vw;
-        color: rgba(245, 245, 245, 0.692);
+        color: rgba(245, 245, 245, 0.792);
     }
     outline: none;
 }
