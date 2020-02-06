@@ -7,7 +7,21 @@ import i3 from '../../Assets/a.jpeg';
 
 function Slider () {
     //array of components to show inside Slider
-    let slideArr = [<ImgComp src={i2}/>,<ImgComp src={i1}/>,<ImgComp src={i2}/>,<ImgComp src={i3}/>,<ImgComp src={i1}/>,<ImgComp src={i2}/>,<ImgComp src={i3}/>];
+    let slideArr = [
+        <ImgComp src={i2}
+            data="Slide 1"/>,
+        <ImgComp src={i1}
+            data="Slide 2"/>,
+        <ImgComp src={i2}
+            data="Slide 3"/>,
+        <ImgComp src={i3}
+            data="Slide 4"/>,
+        <ImgComp src={i1}
+            data="Slide 5"/>,
+        <ImgComp src={i2}
+            data="Slide 6"/>,
+        <ImgComp src={i3}
+            data="Slide 7"/>];
     const [x,setX] = useState(0)
     const goLeft = () => {
         console.log(x);
