@@ -5,7 +5,6 @@ import ReactDOM from 'react-dom';
 import { BrowserRouter } from 'react-router-dom';
 //importing bootstrap
 import 'bootstrap/dist/css/bootstrap.min.css';
-
 //importing the app
 import App from './App';
 
