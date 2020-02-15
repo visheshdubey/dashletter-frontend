@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 const white = {backgroundColor : 'rgb(255,255,255)'};
 const content = (props) => (
     <Card className="text-center" style={{border: 0}}>
-        <Card.Title as="h4" style = {white}>Inbox-Zero Experience</Card.Title>
+        <Card.Title as="h2" style = {white}><b>Inbox-Zero Experience</b></Card.Title>
         <Card.Body>
             <Card.Text>
                 With supporting text below as a natural lead-in to additional content.

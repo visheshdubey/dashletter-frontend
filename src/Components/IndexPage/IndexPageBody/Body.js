@@ -3,32 +3,30 @@ import Img1 from '../../../Assets/1tile.png';
 import Img2 from '../../../Assets/2tile.png';
 import Img3 from '../../../Assets/3tile.png';
 import Img4 from '../../../Assets/4tile.png';
-import {Container, Row, Col} from 'react-bootstrap';
-import BodyComponent from './Images/Images';
 import {Content, Contents} from './Content/index';
 import './Body.css';
 
-const dark ={backgroundColor: '#f2f2f2'};
+const Body = (props) => {
+  return(
+    <div className="content">
+        {/* 1st row */}
+      <div class="largeImage" style={{backgroundImage: 'url(' + Img1 + ')'}}></div>
+      <div class="firstblock text"><Content link = "/user" exact/></div>
+        {/* other rows */}
+      <div className="alt1">
+        <div className="text"><Contents title="One platform for all newsletters" bg='#f2f2f2'/></div>
+        <div style={{backgroundImage: 'url(' + Img2 + ')', backgroundSize:'contain'}}></div>
+      </div>
+      <div className="alt2">
+        <div style={{backgroundImage: 'url(' + Img3 + ')', backgroundSize: 'cover', margin: 10 + '% ' + 8 + '%'}}></div>
+        <div className="text" ><Contents title="We organize newsletter even better"/></div>
+      </div>
+      <div className="alt1">
+        <div className="text"><Contents title="Added security from spamming" bg='#f2f2f2'/></div>
+        <div style={{backgroundImage: 'url(' + Img4 + ')', backgroundSize:'cover', margin: 10 + '% ' + 6 + '%'}} ></div>
+      </div>
+    </div>
+  );
+  }
 
-const body = (props) => (
-<Container fluid={true}>
-  <Row>
-    <Col sm={8} className="largerBlock"><BodyComponent img = {Img1} /></Col>
-    <Col sm={4} className="contentBlock"><Content link = "/user" exact/></Col>
-  </Row>
-  <Row style={dark}>
-    <Col sm={6} className="contentBlock"><Contents title="One platform for all newsletters" bg='#f2f2f2'/></Col>
-    <Col sm={6} className="block" ><BodyComponent img = {Img2} bg='#f2f2f2'/></Col>
-  </Row>
-  <Row>
-    <Col sm={6} className="block"><BodyComponent img = {Img3} /></Col>
-    <Col sm={6} className="contentBlock"><Contents title="We organize newsletter even better"/></Col>
-  </Row>
-  <Row style={dark}>
-    <Col sm={6} className="contentBlock"><Contents title="Added security from spamming" bg='#f2f2f2'/></Col>
-    <Col sm={6} className="block"><BodyComponent img = {Img4} bg='#f2f2f2' /></Col>
-  </Row>
-</Container>
-);
-
-export default body;
+export default Body;

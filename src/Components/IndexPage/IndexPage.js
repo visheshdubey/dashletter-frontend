@@ -20,7 +20,7 @@ class IndexPage extends React.Component {
                     <Popup />               
                 </Modal> 
                 <Toolbar 
-                    brand = 'Dashletter'
+                    title = 'Dashletter'
                     text = 'SignUp'
                     clicked = {this.onClickHandler}/>
                 <Body className="mt-5"/>
