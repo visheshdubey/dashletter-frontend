@@ -3,7 +3,6 @@ import Toolbar from './Toolbar/Toolbar';
 import Body from './Body/Body';
 import './Userpage.scss';
 import {NavLink} from 'react-router-dom';
-import {Button} from 'react-bootstrap';
 
 class UserPage extends React.Component {
     render() {

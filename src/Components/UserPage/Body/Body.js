@@ -1,14 +1,16 @@
 import React from 'react';
 import {Container} from 'react-bootstrap';
 import Slider from '../../../UI/Slider/Slider';
-import Recommended from './Recommended/Recommended';
+import Section from './Section/Section';
 
 const Body = () => {
     return(
         <Container fluid={true}>            
             <Slider />
             <br/>
-            <Recommended/>
+            <Section title="Recommended For You"/>
+            <Section title="Science and Technology"/>
+            <Section title="Top Publishers"/>
         </Container>
     );
 }
