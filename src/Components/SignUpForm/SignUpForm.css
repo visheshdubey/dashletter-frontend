@@ -1,19 +1,9 @@
 h1 {
     text-align: center;
     margin-top: 5%;
-    margin-bottom: 8%;
+    margin-bottom: 5%;
 }
-.formend{
-    margin-bottom: 10%;
-}
-.formblock{
-    margin-top: 10%;
-    width: 70%;
-    margin-left: 15%;
-}
-.containBlock {
-    max-height: 70%;
-}
+
 .googlelogo{
     background-color: #db4437;
 }
