@@ -10,30 +10,29 @@ class SignUp extends React.Component {
         this.state = {
             email: '',
             password: '',
-            error: '',
+            firstName: '',
+            lastName: '',
             loggedIn
         }
         this.handleChange = this.handleChange.bind(this)
-        this.handleSubmit = this.handleSubmit.bind(this)
     }
     handleChange = (e) => {
+        
         this.setState({
             [e.target.id] : e.target.value
         })
     }
+    login = (email, password) => {
+        const request = Axios.post("https://dashletter-backend.herokuapp.com/signup", 
+        { email,  password})
+        .then((response) => console.log(response))
+        .catch((err) => console.log("Something went wrong!", err));
+    }
     handleSubmit = (e) => {
+        e.preventDefault()
+        console.log(this.state)
         const {email, password} = this.state
-        try {
-            const token = Axios.post('https://dashletter-backend.herokuapp.com/signup', {email,password})
-            localStorage.setItem("token", token)
-            this.setState({
-                loggedIn: true
-            })
-        } catch (err) {
-            this.setState({
-                error: err.message
-            })
-        }
+        this.login(email, password)
     }
     render() {
         return(
@@ -46,11 +45,11 @@ class SignUp extends React.Component {
                     <input type="email" className="form-control" placeholder="Enter email" onChange={this.handleChange} id="email"/>
                 </div>
                 <div className="form-group">
-                    <label forhtml="pwd">Password</label>
+                    <label forhtml="password">Password</label>
                     <input type="password" className="form-control" placeholder="Enter password" id="password" onChange={this.handleChange}/>
                 </div>
                 <div className="form-group">
-                    <label forhtml="pwd">Confirm Password</label>
+                    <label forhtml="password">Confirm Password</label>
                     <input type="password" className="form-control" placeholder="Enter password" id="password" onChange={this.handleChange}/>
                 </div>
                 <button type="submit" className="btn btn-danger btn-block">Submit</button>
